@@ -20,9 +20,14 @@ class ViewController: UIViewController {
         redView.layer.cornerRadius = 65
         yellowView.layer.cornerRadius = 65
         greenView.layer.cornerRadius = 65
+        
+        redView.alpha = 0.3
+        yellowView.alpha = 0.3
+        greenView.alpha = 0.3
     }
 
-    @IBAction func startButtonDidTapped() {
+    @IBAction func startNextButtonDidTapped() {
+        
     }
     
 }
