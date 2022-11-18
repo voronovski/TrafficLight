@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,15 +13,12 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lG7-be-kwN">
-                                <rect key="frame" x="127" y="775" width="160" height="47"/>
+                                <rect key="frame" x="97.666666666666686" y="723" width="195" height="47"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="qJR-Af-NDO"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Start">
@@ -31,35 +28,36 @@
                                     <action selector="startNextButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="tCe-lh-jRN"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="S4F-34-LWp">
-                                <rect key="frame" x="128" y="74" width="158" height="593"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="3Qk-vS-8Cy">
+                                <rect key="frame" x="115.66666666666667" y="87" width="158.66666666666663" height="538"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLe-rR-D4d">
-                                        <rect key="frame" x="0.0" y="0.0" width="158" height="172.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="158.66666666666666" height="158.66666666666666"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fLe-rR-D4d" secondAttribute="height" multiplier="1:1" id="zG1-oA-mXp"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOE-mD-X9p">
-                                        <rect key="frame" x="0.0" y="210.33333333333331" width="158" height="172.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="189.66666666666669" width="158.66666666666666" height="158.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxD-97-bFZ">
-                                        <rect key="frame" x="0.0" y="421" width="158" height="172"/>
+                                        <rect key="frame" x="0.0" y="379.33333333333331" width="158.66666666666666" height="158.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="S4F-34-LWp" secondAttribute="height" multiplier="25:94" id="qaD-E0-IlJ"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lG7-be-kwN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3oc-wz-VtI"/>
+                            <constraint firstItem="lG7-be-kwN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="4Ws-cZ-ALT"/>
+                            <constraint firstItem="3Qk-vS-8Cy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.637324" id="9j6-ea-HKX"/>
+                            <constraint firstItem="3Qk-vS-8Cy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P5m-hZ-pX4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lG7-be-kwN" secondAttribute="bottom" constant="40" id="brv-MI-xeQ"/>
-                            <constraint firstItem="S4F-34-LWp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="nDW-dF-eaY"/>
-                            <constraint firstItem="S4F-34-LWp" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.661972" id="vYf-xv-TzS"/>
-                            <constraint firstItem="S4F-34-LWp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ymA-Z3-qPI"/>
+                            <constraint firstItem="3Qk-vS-8Cy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="nB1-Fs-SjA"/>
                         </constraints>
                     </view>
                     <connections>
